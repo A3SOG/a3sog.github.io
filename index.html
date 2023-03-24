@@ -3,14 +3,77 @@ layout: null
 ---
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <body id="page-top">
-        {% include navigation.html %}
-        <header></header>
-        <!-- About -->
-        <section class="about-section text-center" id="services"></section>
-        <!-- Projects -->
-        <section class="projects-section" id="workforus"></section>
-        {% include footer.html %}
-    </body>
+{% include head.html %}
+
+<body id="page-top">
+    {% include navigation.html %}
+    <!-- Login/Register Form -->
+    <div class="wrapper">
+        <span class="icon-close"><i class="fas fa-close"></i></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="" id="" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="" id="" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for="checkbox">
+                        <input type="checkbox" name="" id="">
+                        Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input type="text" name="" id="" required>
+                    <label for="text">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="" id="" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="" id="" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for="checkbox">
+                        <input type="checkbox" name="" id="">
+                        I agree to the terms & conditions
+                    </label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Services -->
+    <section class="service-section" id="services"></section>
+    <!-- Projects -->
+    <section class="project-section" id="projects"></section>
+    <!-- Contact Us -->
+    <section class="contact-section" id="contact"></section>
+    {% include footer.html %}
+</body>
+
 </html>

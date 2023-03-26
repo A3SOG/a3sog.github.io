@@ -8,7 +8,6 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: url('/assets/images/background.jpg') no-repeat;
     background-size: cover;
@@ -17,9 +16,24 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 5em;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #162938;
+}
+
+main {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar {
@@ -88,6 +102,13 @@ header {
 .navigation .btnLogin-popup:hover {
     background: #fff;
     color: #162938;
+}
+
+.wrapper-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -289,18 +310,67 @@ section {
 }
 
 .main-content {
+    position: fixed;
+    top: 10em;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 20px 100px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.blog-section {
+    max-width: 968px;
+}
+
+.blog-section li {
+    list-style: none;
+}
+
+.blog-section a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.blog-section a:hover {
+    text-decoration: underline;
+}
+
+.post-section {
+    max-width: 968px;
+}
+
+.post-section a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.post-section a:hover {
+    text-decoration: underline;
+}
+
+.post-section p {
+    padding: 5px 0;
+}
+
+.post-section li {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.post-section li:before {
+    content: '-';
+    padding-right: 1em;
 }
 
 footer {
-    position: absolute;
-    top: 219.5em;
-    left: 0;
-    width: 100%;
-    padding: 10px 100px;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 100px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,6 +3,7 @@ const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
+const iconBars = document.getElementById('fontAwesomeIcon');
 
 registerLink.addEventListener('click', () => {
     wrapper.classList.add('active');
@@ -10,6 +11,11 @@ registerLink.addEventListener('click', () => {
 
 loginLink.addEventListener('click', () => {
     wrapper.classList.remove('active');
+});
+
+iconBars.addEventListener('click', () => {
+    iconBars.classList.remove('fa-bars');
+    iconBars.classList.add('fa-xmark');
 });
 
 btnPopup.addEventListener('click', () => {
@@ -25,8 +31,12 @@ iconClose.addEventListener('click', () => {
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 0) {
-     $('.navbar').css('background','none');
+        if ($(window).width() < 768) {
+            $('.navbar').css('background','');
+        } else {
+            $('.navbar').css('background','none');
+        }
     } else {
-       $('.navbar').css('background','');
+        $('.navbar').css('background','');
     }
 });

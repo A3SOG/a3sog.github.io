@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar" id="sogNavbar">
     <h2 class="logo"><a href="/">Special Operations Group</a></h2>
     <nav class="navigation">
         <a href="/#page-top">Home</a>
@@ -8,5 +8,17 @@
         <a href="https://a3sog.github.io/knowledgebase" target="_blank">Knowledgebase</a>
         <a href="/blog">Blog</a>
         <button class="btnLogin-popup" type="button">Login</button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars" id="fontAwesomeIcon"></i></a>
     </nav>
 </div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("sogNavbar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+</script>
